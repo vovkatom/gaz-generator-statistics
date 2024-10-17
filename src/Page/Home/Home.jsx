@@ -1,16 +1,15 @@
 import React from 'react';
 import { HomeBox, HomeDescr, HomeImg } from './Home.styled';
-import Phonbook from '../../Utills/Phonbook.png';
+import FonGenerator from '../../img/generator.png';
 
 const Home = () => {
   return (
     <HomeBox>
-      <HomeImg src={Phonbook} alt='img' />
+      <HomeImg src={FonGenerator} alt='img'/>
       <HomeDescr>
-        I offer a program to store your phone numbers contacts. More of my works
-        at GitHub:
+        Час роботи Газ - Бензин ГЕНЕРАТОРА:
         <a target='blank' href='https://github.com/Vovkatom'>
-          <span style={{ color: 'blue' }}>Vladimir Bogachuck</span>
+          <span style={{ color: 'blue' }}>Володимир Богачук</span>
         </a>
       </HomeDescr>
     </HomeBox>

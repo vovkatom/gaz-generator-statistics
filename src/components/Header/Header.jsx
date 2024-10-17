@@ -24,7 +24,7 @@ const Header = () => {
         <HeaderNav position='static'>
           <Toolbar sx={{ padding: '5px' }}>
             <HeaderButton variant='contained'>
-              <LinkHeader to='/'> Home</LinkHeader>
+              <LinkHeader to='/'> ДІМ</LinkHeader>
             </HeaderButton>
 
             {isLoggedIn === true && (
@@ -34,16 +34,16 @@ const Header = () => {
             )}
 
             <HeaderTitle variant='h6' component='div'>
-              Phonebook
+              GAZ-ГЕНЕРАТОР
             </HeaderTitle>
             {isLoggedIn === false && (
               <ButtonNav>
-                <LinkNav to='login'>Log in</LinkNav>
+                <LinkNav to='login'>ВХІД !</LinkNav>
               </ButtonNav>
             )}
             {isLoggedIn === false && (
               <ButtonNav>
-                <LinkNav to='register'>Register</LinkNav>
+                <LinkNav to='register'>РЕЄСТРАЦІЯ</LinkNav>
               </ButtonNav>
             )}
             {isLoggedIn && <UserMenu />}
