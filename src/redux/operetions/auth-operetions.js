@@ -1,7 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
+// axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
 
 const token = {
   set(token) {
@@ -13,10 +14,10 @@ const token = {
 };
 
 export const registerUser = createAsyncThunk(
-  'auth/register',
+  'auth/',
   async (userInfo, thunkAPI) => {
     try {
-      const { data } = await axios.post('/users/signup', userInfo);
+      const { data } = await axios.post('auth/signup', userInfo);
       token.set(data.token);
       return data;
     } catch (error) {
@@ -26,7 +27,7 @@ export const registerUser = createAsyncThunk(
         alert(errorMessage);
       } else {
         // Інші помилки
-        alert('Email is already in use. Please use a different email.');
+        // alert('Email is already in use. Please use a different email.');
       }
 
       return thunkAPI.rejectWithValue(error.message);
