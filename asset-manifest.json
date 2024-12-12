@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/gaz-generator-statistics/static/css/main.01941649.css",
-    "main.js": "/gaz-generator-statistics/static/js/main.38c01811.js",
+    "main.js": "/gaz-generator-statistics/static/js/main.bb79c817.js",
     "static/js/94.81e11336.chunk.js": "/gaz-generator-statistics/static/js/94.81e11336.chunk.js",
     "static/js/841.4646e9fa.chunk.js": "/gaz-generator-statistics/static/js/841.4646e9fa.chunk.js",
     "static/js/152.70b390a7.chunk.js": "/gaz-generator-statistics/static/js/152.70b390a7.chunk.js",
@@ -9,7 +9,7 @@
     "static/media/Phonbook.png": "/gaz-generator-statistics/static/media/Phonbook.28e1a3140bc0758c957d.png",
     "index.html": "/gaz-generator-statistics/index.html",
     "main.01941649.css.map": "/gaz-generator-statistics/static/css/main.01941649.css.map",
-    "main.38c01811.js.map": "/gaz-generator-statistics/static/js/main.38c01811.js.map",
+    "main.bb79c817.js.map": "/gaz-generator-statistics/static/js/main.bb79c817.js.map",
     "94.81e11336.chunk.js.map": "/gaz-generator-statistics/static/js/94.81e11336.chunk.js.map",
     "841.4646e9fa.chunk.js.map": "/gaz-generator-statistics/static/js/841.4646e9fa.chunk.js.map",
     "152.70b390a7.chunk.js.map": "/gaz-generator-statistics/static/js/152.70b390a7.chunk.js.map",
@@ -17,6 +17,6 @@
   },
   "entrypoints": [
     "static/css/main.01941649.css",
-    "static/js/main.38c01811.js"
+    "static/js/main.bb79c817.js"
   ]
 }
