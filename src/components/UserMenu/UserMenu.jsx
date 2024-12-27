@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { logOut } from 'redux/operetions/auth-operetions';
+import { signout } from 'redux/operetions/auth-operetions';
 import { getUserAuth } from 'redux/selector/selectors';
 import { UserMenuBox, UserMenuButton, UserMenuDescr } from './UserMenu.styled';
 
@@ -14,10 +14,10 @@ const UserMenu = () => {
       <UserMenuButton
         type='button'
         size='small'
-        onClick={() => dispatch(logOut())}
+        onClick={() => dispatch(signout())}
         variant='contained'
       >
-        Logout
+        signout
       </UserMenuButton>
     </UserMenuBox>
   );
