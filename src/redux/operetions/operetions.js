@@ -3,6 +3,7 @@ import axios from 'axios';
 
 // axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
 axios.defaults.baseURL = process.env.REACT_APP_API_URL
+// axios.defaults.baseURL = 'https://gaz-generator-statistics-back.onrender.com/api';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
