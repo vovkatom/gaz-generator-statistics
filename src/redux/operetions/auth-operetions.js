@@ -2,11 +2,14 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 // axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
-axios.defaults.baseURL = 'https://gaz-generator-statistics-back.onrender.com/';
-// axios.defaults.baseURL = process.env.REACT_APP_API_URL
+// axios.defaults.baseURL = 'https://gaz-generator-statistics-back.onrender.com/';
+axios.defaults.baseURL = process.env.REACT_APP_API_URL
+// axios.defaults.baseURL = 'https://gaz-generator-statistics-back.onrender.com/api';
 
 const accessToken = {
+
   set(accessToken) {
+
     axios.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
   },
   unset() {
