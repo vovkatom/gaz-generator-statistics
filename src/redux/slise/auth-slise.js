@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 import {
   logInUser,
-  logOut,
+  signout,
   refreshUser,
   registerUser,
 } from '../operetions/auth-operetions';
 
 const userInitialState = {
   user: { name: '', email: '' },
-  token: '',
+  accessToken: '',
   isLoading: false,
   isRefreshUser: false,
   error: null,
@@ -23,7 +23,7 @@ const userAuthSlise = createSlice({
     builder
       .addCase(registerUser.fulfilled, (state, { payload }) => {
         state.user = payload.user;
-        state.token = payload.token;
+        state.accessToken = payload.accessToken;
         state.isLoggedIn = true;
       })
       .addCase(registerUser.rejected, (state, { payload }) => {
@@ -31,18 +31,18 @@ const userAuthSlise = createSlice({
       })
       .addCase(logInUser.fulfilled, (state, { payload }) => {
         state.user = payload.user;
-        state.token = payload.token;
+        state.accessToken = payload.accessToken;
         state.isLoggedIn = true;
       })
       .addCase(logInUser.rejected, (state, { payload }) => {
         state.error = payload.error;
       })
-      .addCase(logOut.fulfilled, state => {
+      .addCase(signout.fulfilled, state => {
         state.user = { name: '', email: '' };
-        state.token = null;
+        state.accessToken = null;
         state.isLoggedIn = false;
       })
-      .addCase(logOut.rejected, (state, { payload }) => {
+      .addCase(signout.rejected, (state, { payload }) => {
         state.error = payload;
       })
       .addCase(refreshUser.pending, state => {
